@@ -19,6 +19,8 @@ ospf_route = "O        10.0.24.0/24 [110/41] via 10.0.13.3, 3d18h, FastEthernet0
 ospf_route_list = ospf_route.replace('O', 'OSPF').split()
 ospf_route_list.remove('via') 
 ospf_route_list[2] = ospf_route_list[2].strip('[]') 
+ospf_route_list[3] = ospf_route_list[3].strip(',')
+ospf_route_list[4] = ospf_route_list[4].strip(',')
 proto, net, metric, ip, time, intf = ospf_route_list
 
 ospf_template = '''
