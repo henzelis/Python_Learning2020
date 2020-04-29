@@ -10,3 +10,14 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+mac_clear = mac.replace(':','')
+print(str(bin(int(mac_clear, 16))).lstrip('0b'))
+
+'''
+Long resolution of task step by step
+'''
+
+mac_clear = mac.replace(':','')
+mac_bin = bin(int(mac_clear, 16))
+print(mac_bin.lstrip('0b'))
+
