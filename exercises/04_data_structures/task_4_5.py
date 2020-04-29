@@ -11,5 +11,27 @@
 
 """
 
+
 command1 = "switchport trunk allowed vlan 1,2,3,5,8"
 command2 = "switchport trunk allowed vlan 1,3,8,9"
+command1_vlan_list = command1.split()[-1].split(',')
+command2_vlan_list = command2.split()[-1].split(',')
+vlan_intersection_list = list(set(command1_vlan_list).intersection(set(command2_vlan_list)))
+vlan_intersection_list.sort
+print(vlan_intersection_list)
+
+"""
+Long resolution step by step
+
+"""
+command1 = "switchport trunk allowed vlan 1,2,3,5,8"
+command2 = "switchport trunk allowed vlan 1,3,8,9"
+command1_vlan_list = command1.split()[-1].split(',')
+command2_vlan_list = command2.split()[-1].split(',')
+vlan_set1 = set(command1_vlan_list)
+vlan_set2 = set(command2_vlan_list)
+vlan_intersection = vlan_set1.intersection(vlan_set2)
+vlan_intersection_list = list(vlan_intersection)
+vlan_intersection_list.sort()
+print(vlan_intersection_list)
+
