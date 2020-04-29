@@ -19,3 +19,12 @@
 """
 
 ip = "192.168.3.1"
+a, b, c, d = ip.split('.')
+template_ip_decimal = "{:8} {:8} {:8} {:8}"
+template_ip_binary = "{:08b} {:08b} {:08b} {:08b}"
+print(template_ip_decimal.format(a, b, c, d))
+print(template_ip_binary.format(int(a), int(b), int(c),int(d)))
+
+
+
+
