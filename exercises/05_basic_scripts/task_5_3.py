@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 5.3
@@ -44,6 +45,9 @@ switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 2,3,4,5
 """
+template = input('Введите режим работы интерфейса (access/trunk): ')
+intf = input('Введите тип и номер интерфейса: ')
+vlan = input('Введите номер влан(ов): ')
 
 access_template = [
     "switchport mode access",
@@ -58,3 +62,22 @@ trunk_template = [
     "switchport mode trunk",
     "switchport trunk allowed vlan {}",
 ]
+
+'''
+intf_mod = {
+'access' : {
+    "switchport mode access, switchport access vlan {}, switchport nonegotiate, spanning-tree portfast, spanning-tree bpduguard enable"
+     },
+  'trunk' : {
+    "switchport trunk encapsulation dot1q, switchport mode trunk, switchport trunk allowed vlan {}"
+    }
+}
+'''
+
+template_dict = {
+'access' : { '\n'.join(access_template)},
+'trunk' : {'\n'.join(trunk_template)}
+}
+
+print("interface {}".format(intf))
+print(str(", ".join(list(template_dict.get(template))).format(vlan)).replace(', ', '\n'))
