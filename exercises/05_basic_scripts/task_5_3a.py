@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 5.3a
@@ -10,6 +11,15 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 То есть эту задачу можно решить без использования условия if и циклов for/while.
 """
+template = input('Введите режим работы интерфейса (access/trunk): ')
+intf = input('Введите тип и номер интерфейса: ')
+
+input_dict = {
+'access' : { 'Введите номер влан(ов): '},
+'trunk' : {'Введите разрешенные VLANы: '}
+}
+
+vlan = input(''.join(list(input_dict.get(template))))
 
 access_template = [
     "switchport mode access",
@@ -24,3 +34,12 @@ trunk_template = [
     "switchport mode trunk",
     "switchport trunk allowed vlan {}",
 ]
+
+
+template_dict = {
+'access' : { '\n'.join(access_template)},
+'trunk' : {'\n'.join(trunk_template)}
+}
+
+print("interface {}".format(intf))
+print(str(", ".join(list(template_dict.get(template))).format(vlan)).replace(', ', '\n'))
