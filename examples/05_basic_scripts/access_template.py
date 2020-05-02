@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+import sys
+
+vlan = sys.argv[1]
+
 access_template = [
     "switchport mode access",
     "switchport access vlan {}",
@@ -6,4 +12,4 @@ access_template = [
     "spanning-tree bpduguard enable",
 ]
 
-print("\n".join(access_template).format(5))
+print("\n".join(access_template).format(vlan))
