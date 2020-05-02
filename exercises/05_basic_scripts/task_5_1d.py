@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 5.1d
@@ -43,3 +44,10 @@ london_co = {
         "routing": True,
     },
 }
+
+hostname = input('Введите имя устройства: ')
+options = ', '.join(london_co[hostname].keys())
+prompt = 'Введите имя параметра' + '(' + options + '): '
+param = str(input(prompt)).lower()
+print(london_co[hostname].get(param, 'Такого параметра нет'))
+
