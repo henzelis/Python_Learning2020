@@ -1,0 +1,302 @@
+In [155]: history
+cls
+ip = '10.1.1.1'
+octets = ip.split('.')
+octets
+'{:08b}'.format(10)
+bin_octets = []
+bit_octets
+'{:08b}'.format(octets[0])
+'{:08b}'.format(int(octets[0]))
+bin_octets = []
+bin_octets.append('{:08b}'.format(int(octets[0])))
+bin_octets.append('{:08b}'.format(int(octets[1])))
+bin_octets.append('{:08b}'.format(int(octets[2])))
+bin_octets.append('{:08b}'.format(int(octets[3])))
+bin_octets
+%history
+bin_octets = []
+bin_octets.append('{:08b}'.format(int(octets[0])))
+bin_octets.append('{:08b}'.format(int(octets[1])))
+bin_octets.append('{:08b}'.format(int(octets[2])))
+bin_octets.append('{:08b}'.format(int(octets[3])))
+bin_octets = []
+for idx in [0,1,2,3]:
+    bin_octets.append('{:08b}'.format(int(octets[idx])))
+bin_octets
+%history
+for idx in [0,1,2,3]:
+    bin_octets.append('{:08b}'.format(int(octets[idx])))
+cls
+octets
+for octet in octets:
+    print(octet)
+for octet in octets:
+    bin_octets.append('{:08b}'.format(int(octets[idx])))
+bin_octets
+bin_octets.clear()
+bin_octets
+for octet in octets:
+    bin_octets.append('{:08b}'.format(int(octets[idx])))
+bin_octets
+bin_octets.clear()
+for octet in octets:
+    bin_octets.append('{:08b}'.format(int(octets[octet])))
+for octet in octets:
+    bin_octets.append('{:08b}'.format(int(octet)))
+bin_octets
+bin_octets.clear()
+for octet in octets:
+    bin_octets.append('{:08b}'.format(int(octet)))
+bin_octets
+octets
+cls
+t = (1,2,3)
+s = 'sfsfsfsf'
+l = [1,2,3]
+s = {2,3,4}
+d = {1: 100, 2: 200f}
+d = {1: 100, 2: 200}
+for item in t:
+    print(item)
+s = 'sfsfsfsf'
+for items in s:
+    print(item)
+s
+for item in s:
+    print(item)
+d
+for item in d:
+    print(item)
+cls
+d
+range(0, 20)
+list(range(0, 20))
+for num in range(10):
+    print('interface Gi0/{}' format(num))
+for num in range(10):
+    print('interface Gi0/{}'.format(num))
+vlans = [1,3,10,15,20]
+for vlan in vlans:
+    print(vlan)
+for vlan in vlans:
+    print('vlan {}'.format(vlan))
+for vlan in vlans:
+    print('vlan {}'.format(vlan))
+    print('name VLAN_{:04}.format(vlan))
+for vlan in vlans:
+    print('vlan {}'.format(vlan))
+    print('name VLAN_{:04}'.format(vlan))
+vlans
+%history
+for num in [1,2,3,]
+for num in (0,1,2,3):
+    print(num)
+for num in '0,1,2,3':
+    print(num)
+for num in {0,1,2,3}:
+    print(num)
+id={0,1,2,3}
+type(id)
+vlans = [1,2]
+vlan = [1,2,10,20]
+for vlan in vlans:
+    print(vlan)
+vlans = [1,2,3,10,20,30]
+for vlan in vlans:
+    print(vlan)
+r1 = {
+'IOS' : '15,4',
+'IP' : '10.255.0.1',
+'hostname' : 'london_r1',
+'location' : '21 New Globe Walk',
+'model' : '4451',
+'vendor' : 'Cisco'}
+for item in r1:
+    print(item)
+for item in r1:
+    print(item, r1[item])
+for key in r1:
+    print(key, r1[item])
+r1.items()
+r1.values()
+for item in r1.items():
+    print(item)
+for item in r1.values():
+    print(item)
+for item in r1.items():
+    key, value = item
+    print(key, value)
+for item in r1.items():
+    print(key, item)
+for item in r1.items():
+    key, item
+    print(key, item)
+for item in r1.items():
+    key, item
+    print(item)
+for item in r1.items():
+    key, item = item
+    print(item)
+for item in r1.items():
+    key, item = item
+    print(key, item)
+for key, value in r1.items():
+    print(key, value)
+r1.items
+r1.items()
+for key, value in r1.items():
+    print(key, value)
+for item in r1.items():
+    key, item = item
+    print(key, item)
+for item in r1.items():
+    item = key, item
+    print(key, item)
+for item in r1.items():
+    key, item = item
+    print(key, item)
+for key, value in r1.items():
+    print(key, value)
+for key in r1:
+    print(key, r1[key])
+r1[key]
+r1
+d:/
+cd d:/
+ls
+cd Python_Learning2020/examples/
+ls
+cd 06_control_structures/
+ls
+commands = ['switchport mode access', 'spanning-tree portfast', 'spannng-tree bpduguard enable']
+fast_int = ['0/1', '0/3', '0/4']
+for intf in fast_int:
+    print(intf)
+for intf in fast_int:
+    print('interface Fa{}'.format(intf))
+for intf in fast_int:
+    print('interface Fa{}'.format(intf))
+    for command in commands:
+        print(command)
+for intf in fast_int:
+    print('interface Fa{}'.format(intf))
+    for command in commands:
+        print(command)
+     print ('\n')
+for intf in fast_int:
+    print('interface Fa{}'.format(intf))
+    for command in commands:
+        print(command)
+        print ('\n')
+for intf in fast_int:
+    print('interface Fa{}'.format(intf))
+    for command in commands:
+        print(command)
+    print ('\n')
+access = {'0/1' : 15, '0/5' : 30, '0/7' : 100}
+access_tempalte = ['switchport mode access',
+                   'switchport access vlan',
+                   'spanning-tree portfast',
+                   'spanning-tree bpduguard enable']
+for intf in access:
+    print(intf)
+for intf in access:
+    print('interface Fa{}.format(intf))
+for intf in access:
+    print('interface Fa{}'.format(intf))
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        print(command)
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        print(command)
+access_tempalate = ['switchport mode access',
+                   'switchport access vlan',
+                   'spanning-tree portfast',
+                   'spanning-tree bpduguard enable']
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        print(command)
+access_template
+access_template = ['switchport mode access',
+                   'switchport access vlan',
+                   'spanning-tree portfast',
+                   'spanning-tree bpduguard enable']
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        print(command)
+access
+command
+commands
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        print(command)
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        print(command)
+access
+access_template
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+        else:
+            print(command)
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+        else:
+            print(command)
+     print('/n')
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+        else:
+            print(command)
+    print('/n')
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+        else:
+            print(command)
+    print('\n')
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+        else:
+            print(command)
+    print('\n')
+access[0/1]
+access['0/1']
+access['0/5']
+access[intf]
+intf
+for intf in access:
+    print('interface Fa{}'.format(intf))
+    for command in access_template:
+        if 'vlan' in command:
+            print(command, access[intf])
+        else:
+            print(command)
+    print('\n')
