@@ -19,20 +19,16 @@
 """
 ip = input('Введите IP-адрес в формате 10.0.1.1: ')
 ip_list = ip.split('.')
-ip_correct = False
-while not ip_correct:
-    if ip.count('.') != 3:
-        print('Количество точек не равно 3')
-    elif ip.replace('.', '').isnumeric() == False:
-        print('IP-адрес не должен содержать букв')
-    elif len(ip.split('.')) != 4:
-        print('IP-адрес должен состоять из 4 октетов')
-    for octet in ip_list:
-        if int(octet) < 0 and int(octet) > 255:
-            print('Октеты в IP-адресе должны быть в диапазоне от 0 до 255:')
+
+for octet in ip_list:
+    if int(octet) < 0 or int(octet) > 255:
+        octets = False
+        break
     else:
-        print('IP-адрес введен в верном формате')
-        ip_correct = True
+        octets = True
+
+if ip.count('.') != 3 or len(ip.split('.')) != 4 or ip.replace('.', '').isnumeric() == False or octets == False:
+    print('Неправильный IP-адрес')
 
 octet = int(ip.split('.')[0])
 
