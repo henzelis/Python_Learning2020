@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 6.2
@@ -14,3 +15,17 @@
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 """
+ip = input('Введите IP-адрес в формате 10.0.1.1: ')
+
+octet = int(ip.split('.')[0])
+
+if octet <= 223 and octet != 0:
+    print('unicast')
+elif octet >=224 and octet <= 239:
+    print('multicast')
+elif ip == '255.255.255.255':
+    print('local broadcast')
+elif ip == '0.0.0.0':
+    print('unassigned')
+else:
+     print('unused')
