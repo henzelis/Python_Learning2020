@@ -59,7 +59,11 @@ for intf, action in trunk.items():
     print('interface FastEthernet' + intf)
     for command in trunk_template:
         if command.endswith('allowed vlan'):
+<<<<<<< HEAD
             print(' '+command+' '+','.join(action).replace(',', ' ').replace('del', 'remove').replace('only',''))
+=======
+            print(command+' '+','.join(action).replace(',', ' ').replace('del', 'remove').replace('only',''))
+>>>>>>> 795e1b58ddf8fac737626841816779c4bb74571a
         else:
             print(" {}".format(command))
     print('\n')
