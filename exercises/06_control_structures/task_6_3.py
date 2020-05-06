@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 6.3
@@ -51,3 +52,12 @@ for intf, vlan in access.items():
             print(" {} {}".format(command, vlan))
         else:
             print(" {}".format(command))
+
+for intf, action in trunk.items():
+	print('interface FastEthernet' + intf)
+	for command in trunk_template:
+		if command.endswith('allowed vlan'):
+			print(command+' '+','.join(action).replace(',', ' ').replace('del', 'remove').replace('only',''))
+		else:
+			print(" {}".format(command))
+
