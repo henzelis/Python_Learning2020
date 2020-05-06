@@ -60,4 +60,4 @@ for intf, action in trunk.items():
 			print(command+' '+','.join(action).replace(',', ' ').replace('del', 'remove').replace('only',''))
 		else:
 			print(" {}".format(command))
-
+    print('/n')
