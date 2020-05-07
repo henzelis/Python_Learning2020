@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 7.1
@@ -14,3 +15,24 @@ Outbound Interface:    FastEthernet0/0
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+ospf_template = ''' 
+Protocol:           {}
+Prefix:             {}
+AD/Metric:          {}
+Next-Hop:           {}
+Last update:        {}
+Outbound Interface: {}
+'''
+
+with open('ospf.txt') as ospf:
+    for ospf_route in ospf:
+        ospf_route_list = ospf_route.replace('O', 'OSPF').split()
+        ospf_route_list.remove('via') 
+        ospf_route_list[2] = ospf_route_list[2].strip('[]') 
+        ospf_route_list[3] = ospf_route_list[3].strip(',')
+        ospf_route_list[4] = ospf_route_list[4].strip(',')
+        proto, net, metric, ip, time, intf = ospf_route_list
+        print(ospf_template.format(proto, net, metric, ip, time, intf))
+
+
+
