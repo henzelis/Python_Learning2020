@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 7.3
@@ -17,3 +18,13 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+
+with open('CAM_table.txt') as mac:
+    for line in mac:
+        if 'DYNAMIC' in line:
+           template_mac_out = "{:8} {:17} {:10}"
+           mac_list = line.rstrip('\n').split()
+           mac_list.remove('DYNAMIC')
+           vlan, mac_addr, intf = mac_list
+           print(template_mac_out.format(vlan, mac_addr, intf))
+          
