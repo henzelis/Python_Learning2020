@@ -1,0 +1,180 @@
+ip = '10.1.1.1'
+ip.split('.')
+result = []
+for octet in ip.split('.'):
+    print(octet)
+for octet in ip.split('.'):
+    print(int(octet))
+for octet in ip.split('.'):
+    result.append(int(octet))
+result
+result = [int(octet) for octet in ip.split('.')]
+result
+[int(octet) for octet in ip.split('.')]
+[int(octet)
+for octet in ip.split('.')]
+['vlan {}'.format(num) for num in [1,14,50,100]]
+cd d"
+cd d:/
+cd Python_Learning2020/
+f = open('examples/07_files/r1.txt')
+lines = f.readlines()
+lines
+[line.rstrip() for line in lines]
+items = [10, 'a', 40, 's', 100]
+for item in items:
+    if type(item) == int:
+        print(item)
+result = []
+for item in items:
+    if type(item) == int:
+        result.append(item)
+result
+[item for items in items if type(item) == int]
+items = [10, 'a', 40, 's', 100]
+[item for items in items if type(item) == int]
+[item for item in items if type(item) == int]
+result
+[item for item in items if type(item) == int]
+[item for item in items if type(item) == int]
+[item
+for item int items
+if type (item) == int]
+[item
+for item in items
+if type(item) == int]
+item
+london_co
+london_co = {'r1': {'IOS': '15.4',
+'hostname' : 'london_r1',
+'location' : '21 New Globe Walk',
+'model' : '4451',
+'vendor' : 'Cisco'},
+'r2' : {'IOS' : '15.4',
+'hostname' : 'london_r2',
+'location' : '21 New Globe Walk',
+'model' : '4451',
+'vendor' : 'Ciscco'},
+'sw1' : {'IOS' : '3.6.XE',
+'IP' : '10.255.0.101',
+'hostname' : 'london_sw1',
+'location' : '21 New Globe Walk',
+'model' : '3850',
+'vendor' : 'Cisco'}}
+london_co
+key = 'hostname'
+for device in london_co:
+    print(device)
+for device in london_co:
+    for param in london_co[device]:
+        print(param)
+for device in london_co:
+    for param in london_co[device]:
+        print(london_co[device][param])
+for device in london_co:
+    for param in london_co[device]:
+        if param = key:
+            print(london_co[device][param])
+for device in london_co:
+    for param in london_co[device]:
+        if param == key:
+            print(london_co[device][param])
+for device, params in london_co.items():
+    for param in params:
+        if param == key:
+            print(params[param])
+lodon_co.items()
+london_co.items()
+params
+param
+params
+param
+for device, params in london_co.items():
+    for param in params:
+        if param == key:
+            print(params[param])
+for device in london_co:
+    for param in london_co[device]:
+        if param == key:
+            print(london_co[device][param])
+for device, params in london_co.items():
+    for param in params:
+        if param == key:
+            print(params[param])
+device
+london_co
+key
+[london_co[device][key] for device in london_co]
+[london_co[device]['hostaname'] for device in london_co]
+[london_co[device][hostaname] for device in london_co]
+key
+[london_co[device]['hostname'] for device in london_co]
+[london_co[device][key] for device in london_co]
+key = 'vendor'
+[london_co[device][key] for device in london_co]
+key = 'hostname'
+[london_co[device][key] for device in london_co]
+for device, params in london_co.items():
+    print(london_co[device][key])
+print(london_co['r1']['hostname'])
+for device, params in london_co:
+    print(london_co[device][key])
+key
+london_co
+london_co.items()
+for device, param in london_co.items():
+    print(device)
+for device, param in london_co.items():
+    print(device[key])
+for device, param in london_co.items():
+    print(key)
+for device, param in london_co.items():
+    print(london_co[device][key])
+[london_co[device][key] for device in london_co]
+london_co[device][key] for device in london_co
+[london_co[device][key] for device in london_co]
+for device in london_co:
+    print(london_co[device][key])
+[item for item in items if type(item) == int]
+items = ['10', 'a', '40', '100', 'g']
+[int(item) for item in items if item.isdigit()]
+items = ['10', 'a', '40', '100', 'g', '10']
+[int(item) for item in items if item.isdigit()]
+{int(item) for item in items if item.isdigit()}
+nums = list(range(1, 21))
+numbs
+nums
+{num: num**2 for num in nums}
+intf_vlan_map = [('f0/0', 55), ('f0/3', 77), ('f0/7', 100)]
+dict(intf_vlan_map)
+for pair in intf_vlan_map:
+    intf, vlan = pair
+    print(intf, vlan)
+for intf, vlan in intf_vlan_map:
+    print(intf, vlan)
+{intf: vlan for intf, vlan int intf_vlan_map}
+{intf: vlan for intf, vlan in intf_vlan_map}
+type(intf_vlan_map)
+london_co
+r1 = london_co[r1]
+r1 = london_co['r1']
+r1
+r1['IP'] =
+r1['IP'] = '10.255.0.1'
+r1
+[key: value for key, value in r1.items()}
+{key: value for key, value in r1.items()}
+{key.lower(): value for key, value in r1.items()}
+![item
+[item for item in items if type(item) == int]
+items
+[int(item) for item in items if item.isdigit()]
+[item for item in items if item.isalpha()]
+', '.join[item for item in items if item.isalpha()]
+', '.join([item for item in items if item.isalpha()])
+', '.join(item for item in items if item.isalpha())
+(item for item in items if item.isalpha())
+g = (item for item in items if item.isalpha())
+g
+', '.join(g)
+', '.join([item for item in items if item.isalpha()])
