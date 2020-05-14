@@ -1,0 +1,1003 @@
+In [1]: with open ('sh_ip_int_br.txt') as f:
+   ...:     for line in f:
+   ...:         print(line)
+   ...:
+R1#show ip interface brief
+
+Interface                  IP-Address      OK? Method Status                Protocol
+
+FastEthernet0/0            15.0.15.1       YES manual up                    up
+
+FastEthernet0/1            10.0.12.1       YES manual up                    up
+
+FastEthernet0/2            10.0.13.1       YES manual up                    up
+
+FastEthernet0/3            unassigned      YES unset  up                    down
+
+Loopback0                  10.1.1.1        YES manual up                    up
+
+Loopback100                100.0.0.1       YES manual up                    up
+
+
+In [2]: with open ('sh_ip_int_br.txt') as f:
+   ...:     for line in f:
+   ...:         print(line.split())
+   ...:
+   ...:
+['R1#show', 'ip', 'interface', 'brief']
+['Interface', 'IP-Address', 'OK?', 'Method', 'Status', 'Protocol']
+['FastEthernet0/0', '15.0.15.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/1', '10.0.12.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/2', '10.0.13.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/3', 'unassigned', 'YES', 'unset', 'up', 'down']
+['Loopback0', '10.1.1.1', 'YES', 'manual', 'up', 'up']
+['Loopback100', '100.0.0.1', 'YES', 'manual', 'up', 'up']
+
+In [3]: with open ('sh_ip_int_br.txt') as f:
+   ...:     for line in f:
+   ...:         line = line.split()
+   ...:         if line[1][0].isdigit():
+   ...:             print(line)
+   ...:
+   ...:
+   ...:
+['FastEthernet0/0', '15.0.15.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/1', '10.0.12.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/2', '10.0.13.1', 'YES', 'manual', 'up', 'up']
+['Loopback0', '10.1.1.1', 'YES', 'manual', 'up', 'up']
+['Loopback100', '100.0.0.1', 'YES', 'manual', 'up', 'up']
+
+In [4]: line
+Out[4]: ['Loopback100', '100.0.0.1', 'YES', 'manual', 'up', 'up']
+
+In [5]: line[0][1]
+Out[5]: 'o'
+
+In [6]: line[1][0]
+Out[6]: '1'
+
+In [7]: line[1][0].isdigit()
+Out[7]: True
+
+In [8]: with open ('sh_ip_int_br.txt') as f:
+   ...:     for line in f:
+   ...:         line = line.split()
+   ...:         if line[1][0].isdigit():
+   ...:             print(line)
+   ...:
+['FastEthernet0/0', '15.0.15.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/1', '10.0.12.1', 'YES', 'manual', 'up', 'up']
+['FastEthernet0/2', '10.0.13.1', 'YES', 'manual', 'up', 'up']
+['Loopback0', '10.1.1.1', 'YES', 'manual', 'up', 'up']
+['Loopback100', '100.0.0.1', 'YES', 'manual', 'up', 'up']
+
+In [9]: with open ('sh_ip_int_br.txt') as f:
+   ...:     for line in f:
+   ...:         line = line.split()
+   ...:         if line[1][0].isdigit():
+   ...:             intf, ip, *rest = line
+   ...:             print(intf, ip)
+   ...:
+   ...:
+FastEthernet0/0 15.0.15.1
+FastEthernet0/1 10.0.12.1
+FastEthernet0/2 10.0.13.1
+Loopback0 10.1.1.1
+Loopback100 100.0.0.1
+
+In [10]: with open ('sh_ip_int_br.txt') as f:
+    ...:     for line in f:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f='{intf:8}, {ip:8}')
+    ...:
+    ...:
+    ...:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-10-b5f2900a540e> in <module>
+      4         if line[1][0].isdigit():
+      5             intf, ip, *rest = line
+----> 6             print(f='{intf:8}, {ip:8}')
+      7
+      8
+
+TypeError: 'f' is an invalid keyword argument for print()
+
+In [11]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f={intf:8}, {ip:8}')
+    ...:
+  File "<ipython-input-11-3958501f8750>", line 6
+    print(f={intf:8}, {ip:8}')
+                              ^
+SyntaxError: EOL while scanning string literal
+
+
+In [12]: del f
+
+In [13]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f="{intf:8}, {ip:8}")
+    ...:
+    ...:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-13-90b47c8e0abc> in <module>
+      4         if line[1][0].isdigit():
+      5             intf, ip, *rest = line
+----> 6             print(f="{intf:8}, {ip:8}")
+      7
+      8
+
+TypeError: 'f' is an invalid keyword argument for print()
+
+In [14]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f"{intf:8}, {ip:8}")
+    ...:
+    ...:
+    ...:
+FastEthernet0/0, 15.0.15.1
+FastEthernet0/1, 10.0.12.1
+FastEthernet0/2, 10.0.13.1
+Loopback0, 10.1.1.1
+Loopback100, 100.0.0.1
+
+In [15]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f"{intf:10}, {ip:10}")
+    ...:
+    ...:
+    ...:
+    ...:
+FastEthernet0/0, 15.0.15.1
+FastEthernet0/1, 10.0.12.1
+FastEthernet0/2, 10.0.13.1
+Loopback0 , 10.1.1.1
+Loopback100, 100.0.0.1
+
+In [16]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f"{intf:10}, {ip:>10}")
+    ...:
+FastEthernet0/0,  15.0.15.1
+FastEthernet0/1,  10.0.12.1
+FastEthernet0/2,  10.0.13.1
+Loopback0 ,   10.1.1.1
+Loopback100,  100.0.0.1
+
+In [17]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f"{intf:16}, {ip:>10}")
+    ...:
+FastEthernet0/0 ,  15.0.15.1
+FastEthernet0/1 ,  10.0.12.1
+FastEthernet0/2 ,  10.0.13.1
+Loopback0       ,   10.1.1.1
+Loopback100     ,  100.0.0.1
+
+In [18]: with open ('sh_ip_int_br.txt') as file:
+    ...:     for line in file:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(f"{intf:16} {ip:>10}")
+    ...:
+FastEthernet0/0   15.0.15.1
+FastEthernet0/1   10.0.12.1
+FastEthernet0/2   10.0.13.1
+Loopback0          10.1.1.1
+Loopback100       100.0.0.1
+
+In [19]:
+
+In [19]:
+
+In [19]: with open ('sh_ip_int_br.txt') as f:
+    ...:     for line in f:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(intf, ip)
+    ...:
+    ...:
+FastEthernet0/0 15.0.15.1
+FastEthernet0/1 10.0.12.1
+FastEthernet0/2 10.0.13.1
+Loopback0 10.1.1.1
+Loopback100 100.0.0.1
+
+In [20]: f
+Out[20]: <_io.TextIOWrapper name='sh_ip_int_br.txt' mode='r' encoding='cp1251'>
+
+In [21]: result = {}
+
+In [22]: with open ('sh_ip_int_br.txt') as f:
+    ...:     for line in f:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             print(intf, ip)
+    ...:
+    ...:
+FastEthernet0/0 15.0.15.1
+FastEthernet0/1 10.0.12.1
+FastEthernet0/2 10.0.13.1
+Loopback0 10.1.1.1
+Loopback100 100.0.0.1
+
+In [23]: with open ('sh_ip_int_br.txt') as f:
+    ...:     for line in f:
+    ...:         line = line.split()
+    ...:         if line[1][0].isdigit():
+    ...:             intf, ip, *rest = line
+    ...:             result[intf] = ip
+    ...:
+    ...:
+
+In [24]: result
+Out[24]:
+{'FastEthernet0/0': '15.0.15.1',
+ 'FastEthernet0/1': '10.0.12.1',
+ 'FastEthernet0/2': '10.0.13.1',
+ 'Loopback0': '10.1.1.1',
+ 'Loopback100': '100.0.0.1'}
+
+In [25]: line
+Out[25]: ['Loopback100', '100.0.0.1', 'YES', 'manual', 'up', 'up']
+
+In [26]: rest
+Out[26]: ['YES', 'manual', 'up', 'up']
+
+In [27]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line'
+  File "<ipython-input-27-57b81a48ce93>", line 3
+    if 'line protocol' in line'
+                               ^
+SyntaxError: EOL while scanning string literal
+
+
+In [28]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line':
+    ...:             print(line)
+  File "<ipython-input-28-8e373f8f1db4>", line 3
+    if 'line protocol' in line':
+                                ^
+SyntaxError: EOL while scanning string literal
+
+
+In [29]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             print(line)
+    ...:
+Ethernet0/0 is up, line protocol is up
+
+Ethernet0/1 is up, line protocol is up
+
+Ethernet0/2 is up, line protocol is up
+
+Ethernet0/3 is up, line protocol is up
+
+Loopback0 is up, line protocol is up
+
+
+In [30]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             print(line)
+    ...:         if 'MTU' in line:
+    ...:             print(line)
+    ...:
+Ethernet0/0 is up, line protocol is up
+
+  MTU is 1500 bytes
+
+Ethernet0/1 is up, line protocol is up
+
+  MTU is 1500 bytes
+
+Ethernet0/2 is up, line protocol is up
+
+  MTU is 1500 bytes
+
+Ethernet0/3 is up, line protocol is up
+
+  MTU is 1500 bytes
+
+Loopback0 is up, line protocol is up
+
+  MTU is 1514 bytes
+
+
+In [31]: intf
+Out[31]: 'Loopback100'
+
+In [32]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:             print(intf)
+    ...:         if 'MTU' in line:
+    ...:             mtu = line.split()[2]
+    ...:             print(mtu)
+    ...:
+Ethernet0/0
+1500
+Ethernet0/1
+1500
+Ethernet0/2
+1500
+Ethernet0/3
+1500
+Loopback0
+1514
+
+In [33]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:             print(intf)
+    ...:         if 'MTU' in line:
+    ...:             mtu = line.split()[2]
+    ...:             print(mtu)
+    ...:         print( intf, mtu)
+    ...:
+Ethernet0/0
+Ethernet0/0 1514
+Ethernet0/0 1514
+Ethernet0/0 1514
+Ethernet0/0 1514
+1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/0 1500
+Ethernet0/1
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/1 1500
+Ethernet0/2
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/2 1500
+Ethernet0/3
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Ethernet0/3 1500
+Loopback0
+Loopback0 1500
+Loopback0 1500
+Loopback0 1500
+Loopback0 1500
+1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+Loopback0 1514
+
+In [34]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:             print(intf)
+    ...:         if 'MTU' in line:
+    ...:             mtu = line.split()[2]
+    ...:             print(mtu)
+    ...:             print(intf, mtu)
+    ...:
+    ...:
+Ethernet0/0
+1500
+Ethernet0/0 1500
+Ethernet0/1
+1500
+Ethernet0/1 1500
+Ethernet0/2
+1500
+Ethernet0/2 1500
+Ethernet0/3
+1500
+Ethernet0/3 1500
+Loopback0
+1514
+Loopback0 1514
+
+In [35]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:             print(intf)
+    ...:         if 'MTU' in line:
+    ...:             mtu = line.split()[2]
+    ...:             print(intf, mtu)
+    ...:
+    ...:
+Ethernet0/0
+Ethernet0/0 1500
+Ethernet0/1
+Ethernet0/1 1500
+Ethernet0/2
+Ethernet0/2 1500
+Ethernet0/3
+Ethernet0/3 1500
+Loopback0
+Loopback0 1514
+
+In [36]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:         if 'MTU' in line:
+    ...:             mtu = line.split()[2]
+    ...:             print(intf, mtu)
+    ...:
+    ...:
+Ethernet0/0 1500
+Ethernet0/1 1500
+Ethernet0/2 1500
+Ethernet0/3 1500
+Loopback0 1514
+
+In [37]: result = {}
+
+In [38]: with open('sh_ip_interface.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:         if 'MTU' in line:
+    ...:             mtu = line.split()[2]
+    ...:             result[intf] = mtu
+    ...:
+    ...:
+
+In [39]: result
+Out[39]:
+{'Ethernet0/0': '1500',
+ 'Ethernet0/1': '1500',
+ 'Ethernet0/2': '1500',
+ 'Ethernet0/3': '1500',
+ 'Loopback0': '1514'}
+
+In [40]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             print(line)
+    ...:         if 'address is' in line:
+    ...:             printj(line)
+    ...:
+    ...:
+    ...:
+Ethernet0/0 is up, line protocol is up
+
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-40-e5f458c528a4> in <module>
+      4             print(line)
+      5         if 'address is' in line:
+----> 6             printj(line)
+      7
+      8
+
+NameError: name 'printj' is not defined
+
+In [41]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             print(line)
+    ...:         if 'address is' in line:
+    ...:             print(line)
+    ...:
+    ...:
+    ...:
+Ethernet0/0 is up, line protocol is up
+
+  Internet address is 192.168.100.2/24
+
+  Broadcast address is 255.255.255.255
+
+  Helper address is not set
+
+Ethernet0/1 is up, line protocol is up
+
+Ethernet0/2 is administratively down, line protocol is down
+
+Ethernet0/3 is administratively down, line protocol is down
+
+Loopback0 is up, line protocol is up
+
+  Internet address is 2.2.2.2/32
+
+  Broadcast address is 255.255.255.255
+
+  Helper address is not set
+
+
+In [42]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             print(line)
+    ...:         if 'Internet address is' in line:
+    ...:             print(line)
+    ...:
+    ...:
+    ...:
+Ethernet0/0 is up, line protocol is up
+
+  Internet address is 192.168.100.2/24
+
+Ethernet0/1 is up, line protocol is up
+
+Ethernet0/2 is administratively down, line protocol is down
+
+Ethernet0/3 is administratively down, line protocol is down
+
+Loopback0 is up, line protocol is up
+
+  Internet address is 2.2.2.2/32
+
+
+In [43]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:             print(intf)
+    ...:         if 'Internet address is' in line:
+    ...:             ip = line.split()[-1]
+    ...:             print(ip)
+    ...:
+    ...:
+    ...:
+Ethernet0/0
+192.168.100.2/24
+Ethernet0/1
+Ethernet0/2
+Ethernet0/3
+Loopback0
+2.2.2.2/32
+
+In [44]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:         if 'Internet address is' in line:
+    ...:             ip = line.split()[-1]
+    ...:             print(intf, ip)
+    ...:
+    ...:
+    ...:
+Ethernet0/0 192.168.100.2/24
+Loopback0 2.2.2.2/32
+
+In [45]: result = []
+
+In [46]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:         if 'Internet address is' in line:
+    ...:             ip = line.split()[-1]
+    ...:             result.append(intf, ip)
+    ...:
+    ...:
+    ...:
+    ...:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-46-bb80005d6428> in <module>
+      5         if 'Internet address is' in line:
+      6             ip = line.split()[-1]
+----> 7             result.append(intf, ip)
+      8
+      9
+
+TypeError: append() takes exactly one argument (2 given)
+
+In [47]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:         if 'Internet address is' in line:
+    ...:             ip = line.split()[-1]
+    ...:             result.append([intf, ip])
+    ...:
+
+In [48]: result
+Out[48]: [['Ethernet0/0', '192.168.100.2/24'], ['Loopback0', '2.2.2.2/32']]
+
+In [49]: with open('sh_ip_interface2.txt') as file:
+    ...:     for line in file:
+    ...:         if 'line protocol' in line:
+    ...:             intf = line.split()[0]
+    ...:         if 'Internet address is' in line:
+    ...:             ip = line.split()[-1]
+    ...:             result.append([intf, ip])
+    ...:
+
+In [50]:
+
+In [50]:
+
+In [50]: with open "../06_control_structures/r1_config.txt" as file:
+    ...:     for line in file:
+    ...:         print(line)
+  File "<ipython-input-50-843664ea4d31>", line 1
+    with open "../06_control_structures/r1_config.txt" as file:
+                                                     ^
+SyntaxError: invalid syntax
+
+
+In [51]: with open '../06_control_structures/r1_config.txt' as file:
+    ...:     for line in file:
+    ...:         print(line)
+  File "<ipython-input-51-6f1fb417275e>", line 1
+    with open '../06_control_structures/r1_config.txt' as file:
+                                                     ^
+SyntaxError: invalid syntax
+
+
+In [52]: with open '/06_control_structures/r1_config.txt' as file:
+    ...:     for line in file:
+    ...:         print(line)
+  File "<ipython-input-52-35c5aff48c71>", line 1
+    with open '/06_control_structures/r1_config.txt' as file:
+                                                   ^
+SyntaxError: invalid syntax
+
+
+In [53]: with open "..\06_control_structures/r1_config.txt" as file:
+    ...:     for line in file:
+    ...:         print(line)
+  File "<ipython-input-53-894854347f9a>", line 1
+    with open "..\06_control_structures/r1_config.txt" as file:
+                                                     ^
+SyntaxError: invalid syntax
+
+
+In [54]: pwd
+Out[54]: 'D:\\Python_Learning2020\\examples\\08_python_basic_examples'
+
+In [55]: cd ..
+D:\Python_Learning2020\examples
+
+In [56]: cd ..
+D:\Python_Learning2020
+
+In [57]: cd exercises/09_functions/
+D:\Python_Learning2020\exercises\09_functions
+
+In [58]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('inerface'):
+    ...:             print(line)
+    ...:
+
+In [59]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             print(line)
+    ...:
+interface Loopback0
+
+interface Tunnel0
+
+interface Ethernet0/0
+
+interface Ethernet0/1
+
+interface Ethernet0/2
+
+interface Ethernet0/3
+
+interface Ethernet0/3.100
+
+interface Ethernet1/0
+
+
+In [60]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             print(line)
+    ...:         if line.startswith(' ip address'):
+    ...:             print(line)
+    ...:
+interface Loopback0
+
+ ip address 10.1.1.1 255.255.255.255
+
+interface Tunnel0
+
+interface Ethernet0/0
+
+ ip address 10.0.13.1 255.255.255.0
+
+interface Ethernet0/1
+
+interface Ethernet0/2
+
+ ip address 10.0.19.1 255.255.255.0
+
+interface Ethernet0/3
+
+interface Ethernet0/3.100
+
+interface Ethernet1/0
+
+
+In [61]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             print(line)
+    ...:         if line.startswith(' ip address'):
+    ...:             print(line)
+    ...:
+interface Loopback0
+
+ ip address 10.1.1.1 255.255.255.255
+
+interface Tunnel0
+
+interface Ethernet0/0
+
+ ip address 10.0.13.1 255.255.255.0
+
+interface Ethernet0/1
+
+interface Ethernet0/2
+
+ ip address 10.0.19.1 255.255.255.0
+
+interface Ethernet0/3
+
+interface Ethernet0/3.100
+
+interface Ethernet1/0
+
+
+In [62]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             intf = line.splite()[0]
+    ...:         if line.startswith(' ip address'):
+    ...:             ip = line.split().[-2]
+    ...:             print(intf, ip)
+    ...:
+  File "<ipython-input-62-eb24d25cce9f>", line 6
+    ip = line.split().[-2]
+                      ^
+SyntaxError: invalid syntax
+
+
+In [63]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             intf = line.splite()[0]
+    ...:         if line.startswith(' ip address'):
+    ...:             ip = line.split()[-2]
+    ...:             print(intf, ip)
+    ...:
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-63-a7f8713dc245> in <module>
+      2     for line in file:
+      3         if line.startswith('interface'):
+----> 4             intf = line.splite()[0]
+      5         if line.startswith(' ip address'):
+      6             ip = line.split()[-2]
+
+AttributeError: 'str' object has no attribute 'splite'
+
+In [64]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             intf = line.split()[0]
+    ...:         if line.startswith(' ip address'):
+    ...:             ip = line.split()[-2]
+    ...:             print(intf, ip)
+    ...:
+interface 10.1.1.1
+interface 10.0.13.1
+interface 10.0.19.1
+
+In [65]: with open("config_r1.txt") as file:
+    ...:     for line in file:
+    ...:         if line.startswith('interface'):
+    ...:             intf = line.split()[-1]
+    ...:         if line.startswith(' ip address'):
+    ...:             ip = line.split()[-2]
+    ...:             print(intf, ip)
+    ...:
+Loopback0 10.1.1.1
+Ethernet0/0 10.0.13.1
+Ethernet0/2 10.0.19.1
+
+In [66]:                                                                                             
