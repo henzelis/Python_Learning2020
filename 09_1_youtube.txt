@@ -1,0 +1,717 @@
+In [1]: def sum(a, b):
+   ...:     return a+b
+   ...:
+
+In [2]: sum
+Out[2]: <function __main__.sum(a, b)>
+
+In [3]: sum(4,6)
+Out[3]: 10
+
+In [4]: sum(42,6)
+Out[4]: 48
+
+In [5]: def sum(a, b):
+   ...:     '''Функция суммирует два числа и возвращает число'''
+   ...:     return a+b
+   ...:
+
+In [6]: sum
+Out[6]: <function __main__.sum(a, b)>
+
+In [7]: sum?
+Signature: sum(a, b)
+Docstring: Функция суммирует два числа и возвращает число
+File:      c:\users\yegor\<ipython-input-5-07b0313968b3>
+Type:      function
+
+In [8]: sorted?
+Signature: sorted(iterable, /, *, key=None, reverse=False)
+Docstring:
+Return a new list containing all items from the iterable in ascending order.
+
+A custom key function can be supplied to customize the sort order, and the
+reverse flag can be set to request the result in descending order.
+Type:      builtin_function_or_method
+
+In [9]: def check_ip(ip)
+  File "<ipython-input-9-5ff4493990c3>", line 1
+    def check_ip(ip)
+                    ^
+SyntaxError: invalid syntax
+
+
+In [10]: def check_ip(ip):
+    ...:     '''
+    ...:     Функция проверяет IP-адрес на коректность и возвращает True/False
+    ...:     '''
+    ...:     pass
+    ...:
+
+In [11]: check_ip?
+Signature: check_ip(ip)
+Docstring: Функция проверяет IP-адрес на коректность и возвращает True/False
+File:      c:\users\yegor\<ipython-input-10-e9e79c75e8f3>
+Type:      function
+
+In [12]: quit
+
+(base) C:\Users\Yegor>d:
+
+(base) D:\>cd Python_Learning2020\examples\09_functions
+
+(base) D:\Python_Learning2020\examples\09_functions>dir
+ Volume in drive D is DATA
+ Volume Serial Number is F84E-7A53
+
+ Directory of D:\Python_Learning2020\examples\09_functions
+
+03.05.2020  12:36    <DIR>          .
+03.05.2020  12:36    <DIR>          ..
+03.05.2020  12:36             1 834 check_password_example.py
+03.05.2020  12:36               831 func_add_user_kwargs_example.py
+03.05.2020  12:36               429 func_check_passwd.py
+03.05.2020  12:36               452 func_check_passwd_optional_param.py
+03.05.2020  12:36               492 func_check_passwd_optional_param_2.py
+03.05.2020  12:36               984 func_config_interface_unpacking.py
+03.05.2020  12:36                41 passwords.txt
+03.05.2020  12:36                35 users.txt
+               8 File(s)          5 098 bytes
+               2 Dir(s)  190 339 072 000 bytes free
+
+(base) D:\Python_Learning2020\examples\09_functions>ipython --colors=Linux
+Python 3.7.6 (default, Jan  8 2020, 20:23:39) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.12.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+
+In [1]: def read_file(filename):
+   ...:     with open(filename) as f:
+   ...:         print(f.read())
+   ...:
+
+In [2]: read_file?
+Signature: read_file(filename)
+Docstring: <no docstring>
+File:      d:\python_learning2020\examples\09_functions\<ipython-input-1-d8826a492f57>
+Type:      function
+
+In [3]: read_file('users.txt')
+nata,nsdfsdjl
+cisco,asdfjsal;dfj
+
+
+In [4]: l = [1,3,2,6]
+
+In [5]: sorted(l)
+Out[5]: [1, 2, 3, 6]
+
+In [6]: sorted_result = sorted(l)
+
+In [7]: sorted_result
+Out[7]: [1, 2, 3, 6]
+
+In [8]: l.append(66)
+
+In [9]: print(result)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-9-6459d04d738f> in <module>
+----> 1 print(result)
+
+NameError: name 'result' is not defined
+
+In [10]: l
+Out[10]: [1, 3, 2, 6, 66]
+
+In [11]: data = read_file('r1.txt')
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+<ipython-input-11-28365833c070> in <module>
+----> 1 data = read_file('r1.txt')
+
+<ipython-input-1-d8826a492f57> in read_file(filename)
+      1 def read_file(filename):
+----> 2     with open(filename) as f:
+      3         print(f.read())
+      4
+
+FileNotFoundError: [Errno 2] No such file or directory: 'r1.txt'
+
+In [12]: ls
+ Volume in drive D is DATA
+ Volume Serial Number is F84E-7A53
+
+ Directory of D:\Python_Learning2020\examples\09_functions
+
+03.05.2020  12:36    <DIR>          .
+03.05.2020  12:36    <DIR>          ..
+03.05.2020  12:36             1 834 check_password_example.py
+03.05.2020  12:36               831 func_add_user_kwargs_example.py
+03.05.2020  12:36               429 func_check_passwd.py
+03.05.2020  12:36               452 func_check_passwd_optional_param.py
+03.05.2020  12:36               492 func_check_passwd_optional_param_2.py
+03.05.2020  12:36               984 func_config_interface_unpacking.py
+03.05.2020  12:36                41 passwords.txt
+03.05.2020  12:36                35 users.txt
+               8 File(s)          5 098 bytes
+               2 Dir(s)  190 339 072 000 bytes free
+
+In [13]: data = read_file('passwords.txt')
+username,password
+bob,l;fsadkflsa;djfl
+
+
+In [14]: data = read_file('passwords.txt')
+username,password
+bob,l;fsadkflsa;djfl
+
+
+In [15]: data
+
+In [16]: print(data)
+None
+
+In [17]: def read_file(filename):
+    ...:     with open(filename) as f:
+    ...:         return f.read()
+    ...:
+
+In [18]: read_file('users.txt')
+Out[18]: 'nata,nsdfsdjl\ncisco,asdfjsal;dfj\n'
+
+In [19]: result = read_file('users.txt')
+
+In [20]: result
+Out[20]: 'nata,nsdfsdjl\ncisco,asdfjsal;dfj\n'
+
+In [21]: def read_file(filename):
+    ...:     with open(filename) as f:
+    ...:         return f.read()
+    ...:         print('#'*10)
+    ...:
+
+In [22]: read_file('users.txt')
+Out[22]: 'nata,nsdfsdjl\ncisco,asdfjsal;dfj\n'
+
+In [23]: read_file('a')
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+<ipython-input-23-9949b0f24f22> in <module>
+----> 1 read_file('a')
+
+<ipython-input-21-7888058a5bc2> in read_file(filename)
+      1 def read_file(filename):
+----> 2     with open(filename) as f:
+      3         return f.read()
+      4         print('#'*10)
+      5
+
+FileNotFoundError: [Errno 2] No such file or directory: 'a'
+
+In [24]: import os
+
+In [25]: os.path.exists
+Out[25]: <function genericpath.exists(path)>
+
+In [26]: os.path.exists('r1.txt')
+Out[26]: False
+
+In [27]: def read_file(filename):
+    ...:     if os.path.exists(filename):
+    ...:         with open(filename) as f:
+    ...:             return f.read()
+    ...:             print('#'*10)
+    ...:     else:
+    ...:         return False
+    ...:
+
+In [28]: def read_file(filename):
+    ...:     if os.path.exists(filename):
+    ...:         with open(filename) as f:
+    ...:             return f.read()
+    ...:             print('#'*10)
+    ...:     else:
+    ...:         return None
+    ...:
+    ...:
+
+In [29]: read_file('r1.txt')
+
+In [30]: def read_file(filename):
+    ...:     if not os path exists(filename):
+    ...:         return None
+    ...:     with open(filename) as f:
+    ...:         return f.read()
+    ...:
+  File "<ipython-input-30-cf2575460e35>", line 2
+    if not os path exists(filename):
+                 ^
+SyntaxError: invalid syntax
+
+
+In [31]: def read_file(filename):
+    ...:     if not os.path.exists(filename):
+    ...:         return None
+    ...:     with open(filename) as f:
+    ...:         return f.read()
+    ...:
+
+In [32]: int[]
+  File "<ipython-input-32-721ee4398f5d>", line 1
+    int[]
+        ^
+SyntaxError: invalid syntax
+
+
+In [33]: int = []
+
+In [34]: int('1')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-34-96ca30e1246e> in <module>
+----> 1 int('1')
+
+TypeError: 'list' object is not callable
+
+In [35]: del int
+
+In [36]: int('1')
+Out[36]: 1
+
+In [37]: def f1(a,b):
+    ...:     def f2():
+    ...:         pass
+    ...:
+
+In [38]: def f(a,b):
+    ...:     return a+b
+    ...:
+
+In [39]: a
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-39-3f786850e387> in <module>
+----> 1 a
+
+NameError: name 'a' is not defined
+
+In [40]: b
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-40-89e6c98d9288> in <module>
+----> 1 b
+
+NameError: name 'b' is not defined
+
+In [41]: test = True
+
+In [42]: def f(a,b):
+    ...:     print(test)
+    ...:     return a+b
+    ...:
+
+In [43]: f(5,6)
+True
+Out[43]: 11
+
+In [44]: def f(a,b, test):
+    ...:     print(test)
+    ...:     return a+b
+    ...:
+
+In [45]: def f(a,b, test_value):
+    ...:     print(test_value)
+    ...:     return a+b
+    ...:
+
+In [46]:
+
+In [46]: test
+Out[46]: True
+
+In [47]: f(4,6, test)
+True
+Out[47]: 10
+
+In [48]: x = 44
+
+In [49]: y = 5
+
+In [50]: f(x, y, test)
+True
+Out[50]: 49
+
+In [51]: def f(a,b, test_value):
+    ...:     c = 55
+    ...:     print(test_value)
+    ...:     return a+b
+    ...:
+
+In [52]: c
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-52-2b66fd261ee5> in <module>
+----> 1 c
+
+NameError: name 'c' is not defined
+
+In [53]: def f(a,b, test_value):
+    ...:     c = 55
+    ...:     print(test_value)
+    ...:     return a, b, c
+    ...:
+    ...:
+
+In [54]: f(x, y, test)
+True
+Out[54]: (44, 5, 55)
+
+In [55]: x, y, z = f(x, y, test)
+True
+
+In [56]: x
+Out[56]: 44
+
+In [57]: y
+Out[57]: 5
+
+In [58]: z
+Out[58]: 55
+
+In [59]: def read_file()
+  File "<ipython-input-59-c9bfe81575bd>", line 1
+    def read_file()
+                   ^
+SyntaxError: invalid syntax
+
+
+In [60]: def read_file():
+    ...:     filename = 'r1.txt'
+    ...:     if not os.path.exists(filename):
+    ...:         return None
+    ...:      with open(filename) as f:
+  File "<tokenize>", line 5
+    with open(filename) as f:
+    ^
+IndentationError: unindent does not match any outer indentation level
+
+
+In [62]: def read_file():
+    ...:     filename = 'r1.txt'
+    ...:     if not os.path.exists(filename):
+    ...:         return None
+    ...:     with open(filename) as f:
+    ...:         return f.read()
+    ...:
+
+In [63]: read_file
+Out[63]: <function __main__.read_file()>
+
+In [64]: read_file()
+
+In [65]: def read_file(filename):
+    ...:     if not os.path.exists(filename):
+    ...:         return None
+    ...:     with open(filename) as f:
+    ...:         return f.read()
+    ...:
+
+In [66]: def del_exc_from_cfg(src_file, dst_file):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file) as dest:
+    ...:         for line in result:
+    ...:             if not line.startswith('!'):
+    ...:                 dest.write(line)
+    ...:
+
+In [67]: def del_exc_from_cfg(src_file, dst_file):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file, 'w') as dest:
+    ...:         for line in result:
+    ...:             if not line.startswith('!'):
+    ...:                 dest.write(line)
+    ...:
+
+In [68]: pwd
+Out[68]: 'D:\\Python_Learning2020\\examples\\09_functions'
+
+In [69]: cd ..
+D:\Python_Learning2020\examples
+
+In [70]: cd 07_files
+D:\Python_Learning2020\examples\07_files
+
+In [71]: cat r1.txt
+  File "<ipython-input-71-62a44428d62e>", line 1
+    cat r1.txt
+         ^
+SyntaxError: invalid syntax
+
+
+In [72]: ls
+ Volume in drive D is DATA
+ Volume Serial Number is F84E-7A53
+
+ Directory of D:\Python_Learning2020\examples\07_files
+
+03.05.2020  12:36    <DIR>          .
+03.05.2020  12:36    <DIR>          ..
+03.05.2020  12:36               242 r1.txt
+03.05.2020  12:36               253 r2.txt
+               2 File(s)            495 bytes
+               2 Dir(s)  190 339 072 000 bytes free
+
+In [73]: more r1.txt
+  File "<ipython-input-73-40489042583f>", line 1
+    more r1.txt
+          ^
+SyntaxError: invalid syntax
+
+
+In [74]: ls
+ Volume in drive D is DATA
+ Volume Serial Number is F84E-7A53
+
+ Directory of D:\Python_Learning2020\examples\07_files
+
+03.05.2020  12:36    <DIR>          .
+03.05.2020  12:36    <DIR>          ..
+03.05.2020  12:36               242 r1.txt
+03.05.2020  12:36               253 r2.txt
+               2 File(s)            495 bytes
+               2 Dir(s)  190 339 072 000 bytes free
+
+In [75]: del_exc_from_cfg('r1.txt', 'result.txt')
+
+In [76]: ls
+ Volume in drive D is DATA
+ Volume Serial Number is F84E-7A53
+
+ Directory of D:\Python_Learning2020\examples\07_files
+
+15.05.2020  12:04    <DIR>          .
+15.05.2020  12:04    <DIR>          ..
+03.05.2020  12:36               242 r1.txt
+03.05.2020  12:36               253 r2.txt
+15.05.2020  12:04               230 result.txt
+               3 File(s)            725 bytes
+               2 Dir(s)  190 339 072 000 bytes free
+
+In [77]: more result.txt
+  File "<ipython-input-77-96234b3fe4e1>", line 1
+    more result.txt
+              ^
+SyntaxError: invalid syntax
+
+
+In [78]: def del_exc_from_cfg(src_file, dst_file):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file, 'w') as dest:
+    ...:         for line in result:
+    ...:             if not line.startswith('!'):
+    ...:                 dest.write(line)
+    ...:
+
+In [79]: del_exc_from_cfg('r1.txt')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-79-21ecb54bcc52> in <module>
+----> 1 del_exc_from_cfg('r1.txt')
+
+TypeError: del_exc_from_cfg() missing 1 required positional argument: 'dst_file'
+
+In [80]: del_exc_from_cfg('r1.txt', 'result.txt', 'rsdfj.txt')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-80-beeea694a3fd> in <module>
+----> 1 del_exc_from_cfg('r1.txt', 'result.txt', 'rsdfj.txt')
+
+TypeError: del_exc_from_cfg() takes 2 positional arguments but 3 were given
+
+In [81]: def copy_lines_cfg(src_file, dst_file, del_exc):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file, 'w') as dest:
+    ...:         for line in result:
+    ...:             if del_exc and line.startswith('!'):
+    ...:                 pass
+    ...:             else:
+    ...:                 dest.write(line)
+    ...:
+
+In [82]: copy_lines_cfg('r1.txt', 'result.txt', True)
+
+In [83]: copy_lines_cfg('r1.txt', 'result.txt', False)
+
+In [84]: def copy_lines_cfg(src_file, dst_file, del_exc=True):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file, 'w') as dest:
+    ...:         for line in result:
+    ...:             if del_exc and line.startswith('!'):
+    ...:                 pass
+    ...:             else:
+    ...:                 dest.write(line)
+    ...:
+
+In [85]: copy_lines_cfg('r1.txt', 'result.txt')
+
+In [86]: def f(a, b):
+    ...:     return a+b
+    ...:
+
+In [87]: f(6,6)
+Out[87]: 12
+
+In [88]: def f(a, b, verbose=True):
+    ...:     if verbose: print(a,b)
+    ...:     return a+b
+    ...:
+
+In [89]: f(6,7)
+6 7
+Out[89]: 13
+
+In [90]: f(6,7, False)
+Out[90]: 13
+
+In [91]: def copy_lines_cfg(src_file, dst_file, del_exc=True):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file, 'w') as dest:
+    ...:         for line in result:
+    ...:             if del_exc and line.startswith('!'):
+    ...:                 pass
+    ...:             else:
+    ...:                 dest.write(line)
+    ...:
+
+In [92]: copy_lines_cfg('r1.txt', 'result.txt', False)
+
+In [93]: def del_exc_from_cfg(src_file, dst_file):
+    ...:     with open(src_file) as src:
+    ...:         result = src.readlines()
+    ...:     with open(dst_file, 'w') as dest:
+    ...:         for line in result:
+    ...:             if not line.startswith('!'):
+    ...:                 dest.write(line)
+    ...:
+
+In [94]:
+
+In [94]: def read_file(filename, verbose=True):
+    ...:     if not os.path.exists(filename):
+    ...:         return None
+    ...:     with open(filename) as f:
+    ...:         if verbose: print('Читаю файл ', filename)
+    ...:         return f.read()
+    ...:
+
+In [95]: read_file('r1.txt')
+Читаю файл  r1.txt
+Out[95]: '!\nservice timestamps debug datetime msec localtime show-timezone year\nservice timestamps log datetime msec localtime show-timezone year\nservice password-encryption\nservice sequence-numbers\n!\nno ip domain lookup\n!\nip ssh version 2\n!\n'
+
+In [96]: read_file('r1.txt', False)
+Out[96]: '!\nservice timestamps debug datetime msec localtime show-timezone year\nservice timestamps log datetime msec localtime show-timezone year\nservice password-encryption\nservice sequence-numbers\n!\nno ip domain lookup\n!\nip ssh version 2\n!\n'
+
+In [97]: read_file('r1.txt', 0)
+Out[97]: '!\nservice timestamps debug datetime msec localtime show-timezone year\nservice timestamps log datetime msec localtime show-timezone year\nservice password-encryption\nservice sequence-numbers\n!\nno ip domain lookup\n!\nip ssh version 2\n!\n'
+
+In [98]: read_file('r1.txt', 1)
+Читаю файл  r1.txt
+Out[98]: '!\nservice timestamps debug datetime msec localtime show-timezone year\nservice timestamps log datetime msec localtime show-timezone year\nservice password-encryption\nservice sequence-numbers\n!\nno ip domain lookup\n!\nip ssh version 2\n!\n'
+
+In [99]:
+
+In [99]:
+
+In [99]:
+
+In [99]:
+
+In [99]: def func(a, b, result=[]):
+    ...:     result.append(a)
+    ...:     result.append(b)
+    ...:     return result
+    ...:
+
+In [100]: func(6,7)
+Out[100]: [6, 7]
+
+In [101]: fun[2,34]
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-101-4ca797cacfce> in <module>
+----> 1 fun[2,34]
+
+NameError: name 'fun' is not defined
+
+In [102]: func[2,34]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-102-76e22b77d09d> in <module>
+----> 1 func[2,34]
+
+TypeError: 'function' object is not subscriptable
+
+In [103]: func(100,200)
+Out[103]: [6, 7, 100, 200]
+
+In [104]: func(3,4)
+Out[104]: [6, 7, 100, 200, 3, 4]
+
+In [105]: def func(a, b, result=None):
+     ...:     result.append(a)
+     ...:     result.append(b)
+     ...:     return result
+     ...:
+
+In [106]: func(3,4)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-106-1de47f773ffd> in <module>
+----> 1 func(3,4)
+
+<ipython-input-105-7c8bb01db680> in func(a, b, result)
+      1 def func(a, b, result=None):
+----> 2     result.append(a)
+      3     result.append(b)
+      4     return result
+      5
+
+AttributeError: 'NoneType' object has no attribute 'append'
+
+In [107]: def func(a, b, result=None):
+     ...:     if not result:
+     ...:         result = []
+     ...:     result.append(a)
+     ...:     result.append(b)
+     ...:     return result
+     ...:
+
+In [108]:
+
+In [108]:
+
+In [108]: func(3,4)
+Out[108]: [3, 4]
+
+In [109]: func(34,34)
+Out[109]: [34, 34]
+
+In [110]: del func
+
+In [111]: func(6,6)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-111-4786445e856f> in <module>
+----> 1 func(6,6)
+
+NameError: name 'func' is not defined
+
+In [112]:
