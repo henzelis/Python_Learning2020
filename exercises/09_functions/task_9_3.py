@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 9.3
@@ -21,3 +22,23 @@
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 """
+
+def get_int_vlan_map(config_filename):
+    dict_access = {}
+    dict_trunk = {}
+    with open(config_filename) as src:
+        result = src.readlines()
+        for line in result:
+            if 'Fast' in line:
+                intf = line.split()[1]
+            elif 'trunk allowed' in line:
+                trunk_vlan = line.split()[4]
+                trunk_vlan = list(int(i) for i in trunk_vlan.split(','))
+                dict_trunk[intf] = trunk_vlan
+            elif 'access vlan' in line:
+                access_vlan = line.split()[3]
+                access_vlan = int(access_vlan)
+                dict_access[intf] = access_vlan
+    set_common = (dict_access, dict_trunk)
+    return set_common
+
