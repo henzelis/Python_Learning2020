@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 9.1a
@@ -37,3 +38,19 @@ port_security_template = [
 ]
 
 access_config = {"FastEthernet0/12": 10, "FastEthernet0/14": 11, "FastEthernet0/16": 17}
+
+def generate_access_config(intf_vlan_mapping, access_template, psecurity=None):
+    result = []
+    for intf, vlan in intf_vlan_mapping.items():
+        result.append(f'interface {intf}')
+        for command in access_template:
+            if 'access vlan' in command:
+                result.append(f'{command} {vlan}')
+            else:
+                result.append(command)
+        if psecurity:
+            for command in psecurity:
+                result.append(command)
+    return result
+
+print(generate_access_config(access_config, access_mode_template))
