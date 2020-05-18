@@ -53,6 +53,7 @@ def convert_config_to_dict(config_filename):
                 line = line.strip()
                 item_list.append(line)
             dict_cfg[key] = item_list
+    dict_cfg.pop('')
     return dict_cfg
 
 print(convert_config_to_dict('config_sw1.txt'))
