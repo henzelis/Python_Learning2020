@@ -37,16 +37,14 @@ def ignore_command(command, ignore):
     """
     return any(word in command for word in ignore)
 
-def convert_config_to_dict(config_filename):
-    dict_cfg = {}
+def convert_config_to_dict(config_filename): 
     with open(config_filename) as cfg:
         result = cfg.readlines()
+        dict_cfg = {}
         for line in result:
             if ignore_command(line, ignore) == True:
                 pass
             elif line.startswith('!'):
-                pass
-            elif line == '\n':
                 pass
             elif not line.startswith(' '):
                 item_list = []
