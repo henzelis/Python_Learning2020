@@ -1,0 +1,1001 @@
+In [1]: print(1,2,3)
+1 2 3
+
+In [2]: print(1,2,3, sep= '|')
+1|2|3
+
+In [3]: print(1,2,3, sep= '\n')
+1
+2
+3
+
+In [4]: print(1,2,3, sep= '3*#')
+13*#23*#3
+
+In [5]:
+
+In [5]:
+
+In [5]:
+
+In [5]: print(1,2,3)
+1 2 3
+
+In [6]: print(1,2,3)
+1 2 3
+
+In [7]: hist
+print(1,2,3)
+print(1,2,3, sep= '|')
+print(1,2,3, sep= '\n')
+print(1,2,3, sep= '3*#')
+print(1,2,3)
+print(1,2,3)
+hist
+
+In [8]: print(1,2,3, end='|')
+   ...: print(1,2,3)
+1 2 3|1 2 3
+
+In [9]: for i in range(1, 11):
+   ...:     print(i, end = ' ')
+   ...:
+1 2 3 4 5 6 7 8 9 10
+In [10]:
+
+In [10]:
+
+In [10]:
+
+In [11]: for i in range(1, 11):
+    ...:     print(i)
+    ...:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+In [12]: for i in range(1, 11):
+    ...:     print(i, end = ' ')
+    ...:
+1 2 3 4 5 6 7 8 9 10
+In [13]: import time
+
+
+In [15]: for i in range(1, 11):
+    ...:     print(i, end = ' ')
+    ...:     time.sleep(1)
+    ...:
+    ...:
+1 2 3 4 5 6 7 8 9 10
+In [16]:
+
+In [16]:
+
+In [16]:
+
+In [16]: for i in range(1, 11):
+    ...:     print(i, end = ' ')
+    ...:     time.sleep(1)
+    ...:
+1 2 3 4 5 6 7 8 9 10
+
+
+In [18]: for i in range(1, 11):
+    ...:     print(i, end = ' ', flush=True)
+    ...:     time.sleep(1)
+    ...:
+1 2 3 4 5 6 7 8 9 10
+
+In [19]: range(10)
+Out[19]: range(0, 10)
+
+In [21]: for i in range(1, 11, 2):
+    ...:     print(i, end = ' ', flush=True)
+    ...:     time.sleep(0.5)
+    ...:
+1 3 5 7 9
+In [22]: range(1, 11)
+Out[22]: range(1, 11)
+
+In [23]: list(range(1,11))
+Out[23]: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+In [25]: range(10, 0, -1)
+Out[25]: range(10, 0, -1)
+
+In [26]: list(range(10, 0, -1))
+Out[26]: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+In [27]: list(range(0, 10, -1))
+Out[27]: []
+
+In [28]: 5 in range(0, 10)
+Out[28]: True
+
+In [29]: nums = range(0, 10)
+
+In [30]: nums[0]
+Out[30]: 0
+
+In [31]: nums[-1]
+Out[31]: 9
+
+In [32]: nums[0:5]
+Out[32]: range(0, 5)
+
+In [33]: len(nums)
+Out[33]: 10
+
+In [34]: a = 50
+
+In [35]: 0 < a < 127
+Out[35]: True
+
+In [36]: a in range(0,127)
+Out[36]: True
+
+In [39]: sorted([1,0,12,6,66])
+Out[39]: [0, 1, 6, 12, 66]
+
+In [40]: sorted({1,0,12,6,66})
+Out[40]: [0, 1, 6, 12, 66]
+
+In [41]: sorted((1,0,12,6,66))
+Out[41]: [0, 1, 6, 12, 66]
+
+In [42]: tuple(sorted((1,0,12,6,66)))
+Out[42]: (0, 1, 6, 12, 66)
+
+In [43]: set(sorted((1,0,12,6,66)))
+Out[43]: {0, 1, 6, 12, 66}
+
+In [46]: sorted('asdkfjldf')
+Out[46]: ['a', 'd', 'd', 'f', 'f', 'j', 'k', 'l', 's']
+
+In [47]: [[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+    ...: [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+    ...: [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+    ...: [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+    ...: [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+Out[47]:
+[[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [48]: data = [[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+    ...: [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+    ...: [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+    ...: [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+    ...: [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [49]: sorted(data)
+Out[49]:
+[[12, 'fa0/6', 'aaaa,bbbb,cccc'],
+ [100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc']]
+
+
+In [52]: data1 = [[12, 'fa0/6'],
+    ...: [100, 'fa0/0'],
+    ...: [102, 'fa0/5'],
+    ...: [300, 'fa0/2'],
+    ...: [1000, 'fa0/1']]
+
+In [53]: dict(data1)
+Out[53]: {12: 'fa0/6', 100: 'fa0/0', 102: 'fa0/5', 300: 'fa0/2', 1000: 'fa0/1'}
+
+In [54]: from operator import itemgetter
+
+In [56]: sorted(data, key=itemgetter(1))
+Out[56]:
+[[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [57]: sorted(data)
+Out[57]:
+[[12, 'fa0/6', 'aaaa,bbbb,cccc'],
+ [100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc']]
+
+In [58]: sorted(data, key=itemgetter(1))
+Out[58]:
+[[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [59]: vlan = ['1', '4', '100', '1000', '20']
+
+In [60]: sorted(vlan)
+Out[60]: ['1', '100', '1000', '20', '4']
+
+In [61]: sorted(vlan, key=int)
+Out[61]: ['1', '4', '20', '100', '1000']
+
+In [62]: sorted(vlan, key=len)
+Out[62]: ['1', '4', '20', '100', '1000']
+
+In [63]: sorted(vlan, key=len, reverse=True)
+Out[63]: ['1000', '100', '20', '1', '4']
+
+In [64]: vlan = ['1', '4', '100', '1000', '20', 'a']
+
+
+In [66]: dict_for_sort = {
+    ...:                 'id' : 1,
+    ...:                 'name' : 'London',
+    ...:                 'IT_VLAN' : 320,
+    ...:                 'User_VLAN' : 1010,
+    ...:                 'Mgmt_VLAN' : 99,
+    ...:                 'to_name' : None,
+    ...:                 'to_id' : None,
+    ...:                 'port' : 'G1/0/11'
+    ...:                 }
+
+In [69]: sorted(dict_for_sort.items())
+Out[69]:
+[('IT_VLAN', 320),
+ ('Mgmt_VLAN', 99),
+ ('User_VLAN', 1010),
+ ('id', 1),
+ ('name', 'London'),
+ ('port', 'G1/0/11'),
+ ('to_id', None),
+ ('to_name', None)]
+
+In [70]: sorted(dict_for_sort, key=str.lower)
+Out[70]: ['id', 'IT_VLAN', 'Mgmt_VLAN', 'name', 'port', 'to_id', 'to_name', 'User_VLAN']
+
+In [71]: sorted(dict_for_sort)
+Out[71]: ['IT_VLAN', 'Mgmt_VLAN', 'User_VLAN', 'id', 'name', 'port', 'to_id', 'to_name']
+
+In [72]: sorted(dict_for_sort, key=str.lower)
+Out[72]: ['id', 'IT_VLAN', 'Mgmt_VLAN', 'name', 'port', 'to_id', 'to_name', 'User_VLAN']
+
+In [73]: data
+Out[73]:
+[[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [74]: sorted(data)
+Out[74]:
+[[12, 'fa0/6', 'aaaa,bbbb,cccc'],
+ [100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc']]
+
+
+In [76]: sorted(dict_for_sort.items())
+Out[76]:
+[('IT_VLAN', 320),
+ ('Mgmt_VLAN', 99),
+ ('User_VLAN', 1010),
+ ('id', 1),
+ ('name', 'London'),
+ ('port', 'G1/0/11'),
+ ('to_id', None),
+ ('to_name', None)]
+
+In [78]: sorted(dict_for_sort, key=itemgetter(1))
+Out[78]: ['IT_VLAN', 'name', 'id', 'Mgmt_VLAN', 'to_name', 'to_id', 'port', 'User_VLAN']
+
+In [79]: l = [1,2,3]
+
+In [80]: l.append(4)
+
+In [81]: l
+Out[81]: [1, 2, 3, 4]
+
+In [82]: s = 'werwer'
+
+In [83]: s.upper()
+Out[83]: 'WERWER'
+
+In [84]: s
+Out[84]: 'werwer'
+
+In [85]: l.sort()
+
+In [86]: l
+Out[86]: [1, 2, 3, 4]
+
+In [87]: l = [1,4,2,12]
+
+In [88]: l.sort()
+
+In [89]: l
+Out[89]: [1, 2, 4, 12]
+
+In [90]: dict_for_sort
+Out[90]:
+{'id': 1,
+ 'name': 'London',
+ 'IT_VLAN': 320,
+ 'User_VLAN': 1010,
+ 'Mgmt_VLAN': 99,
+ 'to_name': None,
+ 'to_id': None,
+ 'port': 'G1/0/11'}
+
+In [91]: data
+Out[91]:
+[[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [92]: for item in data:
+    ...:     print(item)
+    ...:
+[100, 'fa0/0', 'aaaa,bbbb,cccc']
+[300, 'fa0/2', 'aaaa,bbbb,cccc']
+[1000, 'fa0/1', 'aaaa,bbbb,cccc']
+[102, 'fa0/5', 'aaaa,bbbb,cccc']
+[12, 'fa0/6', 'aaaa,bbbb,cccc']
+
+
+In [96]: data
+Out[96]:
+[[100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [12, 'fa0/6', 'aaaa,bbbb,cccc']]
+
+In [97]: data.sort()
+
+In [98]: data
+Out[98]:
+[[12, 'fa0/6', 'aaaa,bbbb,cccc'],
+ [100, 'fa0/0', 'aaaa,bbbb,cccc'],
+ [102, 'fa0/5', 'aaaa,bbbb,cccc'],
+ [300, 'fa0/2', 'aaaa,bbbb,cccc'],
+ [1000, 'fa0/1', 'aaaa,bbbb,cccc']]
+
+
+In [100]: list(enumerate([100, 200, 300, 400]))
+Out[100]: [(0, 100), (1, 200), (2, 300), (3, 400)]
+
+In [101]: dict(list(enumerate([100, 200, 300, 400])))
+Out[101]: {0: 100, 1: 200, 2: 300, 3: 400}
+
+In [102]:
+
+In [102]:
+
+In [102]:
+
+In [102]: list(enumerate([100, 200, 300, 400], 1))
+Out[102]: [(1, 100), (2, 200), (3, 300), (4, 400)]
+
+In [103]: list(enumerate([100, 200, 300, 400], 1000))
+Out[103]: [(1000, 100), (1001, 200), (1002, 300), (1003, 400)]
+
+In [104]: for idx, item in enumerate(data, 1):
+     ...:     print(idx, item)
+     ...:
+1 [12, 'fa0/6', 'aaaa,bbbb,cccc']
+2 [100, 'fa0/0', 'aaaa,bbbb,cccc']
+3 [102, 'fa0/5', 'aaaa,bbbb,cccc']
+4 [300, 'fa0/2', 'aaaa,bbbb,cccc']
+5 [1000, 'fa0/1', 'aaaa,bbbb,cccc']
+
+In [105]: item
+Out[105]: [1000, 'fa0/1', 'aaaa,bbbb,cccc']
+
+In [106]: idx
+Out[106]: 5
+
+In [107]: key = ['Protocol', 'Prefix', 'Interface']
+
+In [108]: key
+Out[108]: ['Protocol', 'Prefix', 'Interface']
+
+In [109]: value = ['OSPF', '10.1.1.0/28', 'Fa0/0']
+
+In [110]: zip(key, value)
+Out[110]: <zip at 0x25e5960bd88>
+
+In [111]: list(zip(key, value))
+Out[111]: [('Protocol', 'OSPF'), ('Prefix', '10.1.1.0/28'), ('Interface', 'Fa0/0')]
+
+In [112]: dict(zip(key, value))
+Out[112]: {'Protocol': 'OSPF', 'Prefix': '10.1.1.0/28', 'Interface': 'Fa0/0'}
+
+In [113]: a = [1,2,3]
+
+In [114]: b = [10,20,30]
+
+In [115]: c = [100, 200, 300]
+
+In [116]: list(zip(a,b,c))
+Out[116]: [(1, 10, 100), (2, 20, 200), (3, 30, 300)]
+
+
+In [119]: list(zip(a,b,c))
+Out[119]: [(1, 10, 100), (2, 20, 200), (3, 30, 300)]
+
+
+In [121]: d_keys = ['hostname', 'location', 'vendor', 'model', 'IOS', 'IP']
+
+In [122]: data = {
+     ...:         'r1': ['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1'],
+     ...:         'r2': ['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2'],
+     ...:         'sw1' : ['london_sw1', '21 New Globe Walk', 'Cisco', '3850', '3.6.XE', '10.255.0.101']
+     ...:         }
+
+In [123]: data
+Out[123]:
+{'r1': ['london_r1',
+  '21 New Globe Walk',
+  'Cisco',
+  '4451',
+  '15,4',
+  '10.255.0.1'],
+ 'r2': ['london_r2',
+  '21 New Globe Walk',
+  'Cisco',
+  '4451',
+  '15,4',
+  '10.255.0.2'],
+ 'sw1': ['london_sw1',
+  '21 New Globe Walk',
+  'Cisco',
+  '3850',
+  '3.6.XE',
+  '10.255.0.101']}
+
+In [124]: london_co = {}
+
+In [125]: d_keys = ['hostname', 'location', 'vendor', 'model', 'IOS', 'IP']
+
+In [126]: data = {
+     ...:         'r1': ['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1'],
+     ...:         'r2': ['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2'],
+     ...:         'sw1' : ['london_sw1', '21 New Globe Walk', 'Cisco', '3850', '3.6.XE', '10.255.0.101']
+     ...:         }
+
+In [127]: for key in d_keys:
+     ...:     print(key)
+     ...:
+hostname
+location
+vendor
+model
+IOS
+IP
+
+
+In [129]: for hostname in data:
+     ...:     print(hostname)
+     ...:     print(data[hostname])
+     ...:     london_co[hostname] = dict(zip(d_keys, data[hostname]))
+     ...:
+r1
+['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1']
+r2
+['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2']
+sw1
+['london_sw1', '21 New Globe Walk', 'Cisco', '3850', '3.6.XE', '10.255.0.101']
+
+In [130]: london_co
+Out[130]:
+{'r1': {'hostname': 'london_r1',
+  'location': '21 New Globe Walk',
+  'vendor': 'Cisco',
+  'model': '4451',
+  'IOS': '15,4',
+  'IP': '10.255.0.1'},
+ 'r2': {'hostname': 'london_r2',
+  'location': '21 New Globe Walk',
+  'vendor': 'Cisco',
+  'model': '4451',
+  'IOS': '15,4',
+  'IP': '10.255.0.2'},
+ 'sw1': {'hostname': 'london_sw1',
+  'location': '21 New Globe Walk',
+  'vendor': 'Cisco',
+  'model': '3850',
+  'IOS': '3.6.XE',
+  'IP': '10.255.0.101'}}
+
+In [131]: data
+Out[131]:
+{'r1': ['london_r1',
+  '21 New Globe Walk',
+  'Cisco',
+  '4451',
+  '15,4',
+  '10.255.0.1'],
+ 'r2': ['london_r2',
+  '21 New Globe Walk',
+  'Cisco',
+  '4451',
+  '15,4',
+  '10.255.0.2'],
+ 'sw1': ['london_sw1',
+  '21 New Globe Walk',
+  'Cisco',
+  '3850',
+  '3.6.XE',
+  '10.255.0.101']}
+
+In [132]: d_keys
+Out[132]: ['hostname', 'location', 'vendor', 'model', 'IOS', 'IP']
+
+
+In [134]: data['r1']
+Out[134]: ['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1']
+
+In [135]: data['r2']
+Out[135]: ['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2']
+
+In [136]: for hostname in data:
+     ...:     print(hostname)
+     ...:     print(data[hostname])
+     ...:     london_co[hostname] = dict(zip(d_keys, data[hostname]))
+     ...:
+r1
+['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1']
+r2
+['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2']
+sw1
+['london_sw1', '21 New Globe Walk', 'Cisco', '3850', '3.6.XE', '10.255.0.101']
+
+In [137]: for hostname in data:
+     ...:     print(hostname)
+     ...:     print(data[hostname])
+     ...:     london_co[hostname] = dict(zip(d_keys, data[hostname]))
+     ...:
+r1
+['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1']
+r2
+['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2']
+sw1
+['london_sw1', '21 New Globe Walk', 'Cisco', '3850', '3.6.XE', '10.255.0.101']
+
+In [138]: d_keys = [str.lower(s) for s in d_keys]
+
+In [139]:
+
+In [139]:
+
+In [139]: for hostname in data:
+     ...:     print(hostname)
+     ...:     print(data[hostname])
+     ...:     london_co[hostname] = dict(zip(d_keys, data[hostname]))
+     ...:
+r1
+['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.1']
+r2
+['london_r2', '21 New Globe Walk', 'Cisco', '4451', '15,4', '10.255.0.2']
+sw1
+['london_sw1', '21 New Globe Walk', 'Cisco', '3850', '3.6.XE', '10.255.0.101']
+
+In [140]: london_co
+Out[140]:
+{'r1': {'hostname': 'london_r1',
+  'location': '21 New Globe Walk',
+  'vendor': 'Cisco',
+  'model': '4451',
+  'ios': '15,4',
+  'ip': '10.255.0.1'},
+ 'r2': {'hostname': 'london_r2',
+  'location': '21 New Globe Walk',
+  'vendor': 'Cisco',
+  'model': '4451',
+  'ios': '15,4',
+  'ip': '10.255.0.2'},
+ 'sw1': {'hostname': 'london_sw1',
+  'location': '21 New Globe Walk',
+  'vendor': 'Cisco',
+  'model': '3850',
+  'ios': '3.6.XE',
+  'ip': '10.255.0.101'}}
+
+In [141]: data1 = [1,2,3]
+
+In [142]: data2 = [100,200,300]
+
+In [143]: for i, j in zip(data1,data2):
+     ...:     print(i,j)
+     ...:
+1 100
+2 200
+3 300
+
+In [144]: a = ''
+
+In [145]: b = 5
+
+In [146]: c = True
+
+In [147]: a or b or c is True
+Out[147]: 5
+
+In [148]: ip = '10.1.1.1'
+
+In [149]: [octet for octet in ip.split('.')]
+Out[149]: ['10', '1', '1', '1']
+
+In [150]: [octet.isdigit for octet in ip.split('.')]
+Out[150]:
+[<function str.isdigit()>,
+ <function str.isdigit()>,
+ <function str.isdigit()>,
+ <function str.isdigit()>]
+
+In [151]: [octet.isdigit() for octet in ip.split('.')]
+Out[151]: [True, True, True, True]
+
+In [152]: all([octet.isdigit() for octet in ip.split('.')])
+Out[152]: True
+
+
+In [154]: [octet for octet in ip]
+Out[154]: ['1', '0', '.', '1', '.', '1', '.', '1']
+
+In [155]: [octet for octet in ip.split('.')]
+Out[155]: ['10', '1', '1', '1']
+
+In [156]: [int(octet) for octet in ip.split('.')]
+Out[156]: [10, 1, 1, 1]
+
+In [157]:
+
+In [157]:
+
+In [157]: a = True
+
+In [158]: b = False
+
+In [159]: c = True
+
+
+In [161]: [item for item in (a,b,c)]
+Out[161]: [True, False, True]
+
+
+In [163]: all([item for item in (a,b,c)])
+Out[163]: False
+
+In [164]: any([item for item in (a,b,c)])
+Out[164]: True
+
+In [165]: a = ''
+
+In [166]: b = 5
+
+In [167]: c = True
+
+In [168]: bool(5)
+Out[168]: True
+
+In [169]: bool(0)
+Out[169]: False
+
+In [170]: any([item for item in (a,b,c)])
+Out[170]: True
+
+
+In [172]: any([bool(item) for item in (a,b,c)])
+Out[172]: True
+
+In [173]: def ignore_command(line):
+     ...:     ignore = ['alias', 'duplex', 'Current configuration']
+     ...:     ignore_line = False
+     ...:     for word in ignore:
+     ...:         if word in line:
+     ...:             return True
+     ...:     return ignore_line
+     ...:
+
+In [174]: ignore_command('alias exec c conf t')
+Out[174]: True
+
+In [177]: ignore_command('interface Fa0/0')
+Out[177]: False
+
+In [178]:
+
+In [178]:
+
+In [178]:
+
+In [178]: def ignore_command(line):
+     ...:     ignore = ['alias', 'duplex', 'Current configuration']
+     ...:     ignore_line = False
+     ...:     for word in ignore:
+     ...:         if word in line:
+     ...:             return True
+     ...:     return ignore_line
+     ...:
+
+In [179]: ignore = ['alias', 'duplex', 'Current configuration']
+
+
+
+In [181]: line = 'alias exec c conf t'
+
+In [182]: [word in line for word in ignore]
+Out[182]: [True, False, False]
+
+In [183]: any([word in line for word in ignore])
+Out[183]: True
+
+
+In [186]: def ignore_command(line):
+     ...:     ignore = ['alias', 'duplex', 'Current configuration']
+     ...:     any([word in line for word in ignore])
+     ...:
+
+In [187]: ignore_command('int fa 4')
+
+In [188]: ignore_command('alias')
+
+In [189]:
+
+In [189]: def ignore_command(line):
+     ...:     ignore = ['alias', 'duplex', 'Current configuration']
+     ...:     return any([word in line for word in ignore])
+     ...:
+
+In [190]:
+
+In [190]:
+
+In [190]: ignore_command('alias')
+Out[190]: True
+
+In [191]: ignore_command('int fa 4')
+Out[191]: False
+
+
+In [192]: [word in line for word in ignore]
+Out[192]: [True, False, False]
+
+In [194]: line
+Out[194]: 'alias exec c conf t'
+
+In [195]: ignore
+Out[195]: ['alias', 'duplex', 'Current configuration']
+
+In [198]: with open ('d:/Python_Learning2020/exercises/09_functions/config_r1.txt') as f:
+     ...:     for line in f:
+     ...:         if not ignore_command(line):
+     ...:             print(line.rstrip())
+     ...:
+     ...:
+!
+! Last configuration change at 13:13:40 UTC Tue Mar 1 2016
+version 15.2
+no service timestamps debug uptime
+no service timestamps log uptime
+no service password-encryption
+!
+hostname PE_r1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 50000
+!
+no aaa new-model
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+ip auth-proxy max-login-attempts 5
+ip admission max-login-attempts 5
+!
+!
+!
+!
+!
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+mpls label range 1000 1999
+mpls label protocol ldp
+mpls ldp explicit-null
+mpls ldp discovery targeted-hello accept
+mpls traffic-eng tunnels
+xconnect logging redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.1.1.1 255.255.255.255
+!
+interface Tunnel0
+ ip unnumbered Loopback0
+ tunnel mode mpls traffic-eng
+ tunnel destination 10.2.2.2
+ tunnel mpls traffic-eng priority 7 7
+ tunnel mpls traffic-eng bandwidth 5000
+ tunnel mpls traffic-eng path-option 10 dynamic
+ no routing dynamic
+!
+interface Ethernet0/0
+ description To PE_r3 Ethernet0/0
+ bandwidth 100000
+ ip address 10.0.13.1 255.255.255.0
+ mpls traffic-eng tunnels
+ ip rsvp bandwidth 100000 10000
+!
+interface Ethernet0/1
+ no ip address
+!
+interface Ethernet0/2
+ description To P_r9 Ethernet0/2
+ ip address 10.0.19.1 255.255.255.0
+ mpls traffic-eng tunnels
+ ip rsvp bandwidth
+!
+interface Ethernet0/3
+ description To sw1 Ethernet0/3
+ no ip address
+!
+interface Ethernet0/3.100
+ encapsulation dot1Q 100
+ xconnect 10.2.2.2 12100 encapsulation mpls
+  backup peer 10.4.4.4 14100
+  backup delay 1 1
+!
+interface Ethernet1/0
+ no ip address
+ shutdown
+!
+router ospf 1
+ mpls ldp autoconfig area 0
+ mpls traffic-eng router-id Loopback0
+ mpls traffic-eng area 0
+ network 10.0.0.0 0.255.255.255 area 0
+!
+router bgp 100
+ bgp log-neighbor-changes
+ bgp bestpath igp-metric ignore
+ neighbor 10.2.2.2 remote-as 100
+ neighbor 10.2.2.2 update-source Loopback0
+ neighbor 10.2.2.2 next-hop-self
+ neighbor 10.4.4.4 remote-as 40
+ !
+ address-family vpnv4
+  neighbor 10.2.2.2 activate
+  neighbor 10.2.2.2 send-community both
+  exit-address-family
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip route 10.2.2.2 255.255.255.255 Tunnel0
+!
+ip access-list standard LDP
+ deny   10.0.0.0 0.0.255.255
+ permit 10.0.0.0 0.255.255.255
+!
+!
+ip prefix-list TEST seq 5 permit 10.6.6.6/32
+!
+!
+mpls ldp router-id Loopback0 force
+!
+control-plane
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input all
+!
+event manager applet update-int-desc
+ event neighbor-discovery interface regexp .*Ethernet.* cdp add
+ action 1.0 cli command "enable"
+ action 2.0 cli command "config t"
+ action 3.0 cli command "interface $_nd_local_intf_name"
+ action 4.0 cli command "description To $_nd_cdp_entry_name $_nd_port_id"
+ action 5.0 syslog msg "Description for $_nd_local_intf_name changed to $_nd_cdp_entry_name $_nd_port_id"
+ action 6.0 cli command "end"
+ action 7.0 cli command "exit"
+!
+end
+
+In [199]:
+     ...:     ignore = ['alias', 'duplex', 'Current configuration']
+
+In [200]: line = 'alias exec c conf t'
+
+In [201]: ignore_command = False
+
+In [202]: for word in ignore:
+     ...:     print(word)
+     ...:
+alias
+duplex
+Current configuration
+
+In [203]: for word in ignore:
+     ...:     print(word)
+     ...:     if word in line:
+     ...:         print(True)
+     ...:
+alias
+True
+duplex
+Current configuration
+
+In [204]: line
+Out[204]: 'alias exec c conf t'
+
+
+In [206]: for word in ignore:
+     ...:     print(word)
+     ...:     print(word in line)
+     ...:
+alias
+True
+duplex
+False
+Current configuration
+False
+
+In [207]: for word in ignore:
+     ...:     if word in line:
+     ...:         ignore_line = True
+     ...:
+
+In [208]: ignore_line
+Out[208]: True
+
+In [209]: def ignore_command(line):
+     ...:     ignore = ['alias', 'duplex', 'Current configuration']
+     ...:     ignore_line = False
+     ...:     for word in ignore:
+     ...:         if word in line:
+     ...:             return True
+     ...:     return False
+     ...:
+     ...:
+
+In [210]:
