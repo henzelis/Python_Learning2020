@@ -80,4 +80,5 @@ template_dict = {
 }
 
 print("interface {}".format(intf))
-print(str(", ".join(list(template_dict.get(template))).format(vlan)).replace(', ', '\n'))
+'''print(str(", ".join(list(template_dict.get(template))).format(vlan)).replace(', ', '\n')) - дуже багато непотрібних параметрів'''
+print(''.join(template_dict.get(template)).format(vlan))
