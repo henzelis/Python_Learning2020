@@ -45,10 +45,12 @@ def parse_cdp_neighbors(command_output):
             pass
         elif line == '':
             pass
+        elif "/n" in line:
+            pass
         else:
             remote_host=line.split()[0]
             local_intf=line.split()[1]+line.split()[2]
-            remote_intf=line.split()[8]+line.split()[9]
+            remote_intf=line.split()[-2]+line.split()[-1]
             local_pair = (localhost,local_intf)
             remote_pair = (remote_host,remote_intf)
             cdp_dict[(local_pair)] = remote_pair
