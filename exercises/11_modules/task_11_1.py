@@ -30,3 +30,31 @@ R6           Fa 0/2          143           R S I           2811       Fa 0/0
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
+
+def parse_cdp_neighbors(command_output):
+    cdp_dict={}
+    for line in command_output.split('\n'):
+        if ">" in line:
+            localhost=line.split('>')[0]
+        elif "Capability Codes" in line:
+            pass
+        elif "Device ID" in line:
+            pass
+        elif "S - Switch" in line:
+            pass
+        elif line == '':
+            pass
+        else:
+            remote_host=line.split()[0]
+            local_intf=line.split()[1]+line.split()[2]
+            remote_intf=line.split()[8]+line.split()[9]
+            local_pair = (localhost,local_intf)
+            remote_pair = (remote_host,remote_intf)
+            cdp_dict[(local_pair)] = remote_pair
+            #print(cdp_dict)
+    return cdp_dict
+
+
+if __name__ == "__main__":
+    with open("sh_cdp_n_sw1.txt") as f:
+        print(parse_cdp_neighbors(f.read()))
