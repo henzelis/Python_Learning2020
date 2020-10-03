@@ -19,7 +19,8 @@ input_dict = {
 'trunk' : {'Введите разрешенные VLANы: '}
 }
 
-vlan = input(''.join(list(input_dict.get(template))))
+'''vlan = input(''.join(list(input_dict.get(template)))) - не потрібно перетворювали в list, лишня дія '''
+vlan = input(''.join(input_dict.get(template)))
 
 access_template = [
     "switchport mode access",
@@ -42,4 +43,5 @@ template_dict = {
 }
 
 print("interface {}".format(intf))
-print(str(", ".join(list(template_dict.get(template))).format(vlan)).replace(', ', '\n'))
+'''print(str(", ".join(list(template_dict.get(template))).format(vlan)).replace(', ', '\n')) - дуже багато непотрібних параметрів'''
+print(''.join(template_dict.get(template)).format(vlan))
