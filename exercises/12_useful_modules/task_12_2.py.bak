@@ -31,6 +31,7 @@
 
 """
 
+
 def convert_ranges_to_ip_list(ip_list):
     ip_clear_list = []
     for ip in ip_list:
